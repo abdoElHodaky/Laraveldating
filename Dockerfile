@@ -10,7 +10,7 @@ ENV REAL_IP_HEADER 1
 #ENV WEBROOT /var/www/html/public/
 
 # Laravel config
-#ENV APP_KEY base64:R+QG2UfUtR9sswBurkqPoviy25XANaKrV/i/xE8ulPU=
+ENV APP_KEY base64:0bbBc3I8pGPeNBCsTmYuKN36svI8VNwP1QMxckrQy2w=
 ENV APP_ENV production
 ENV APP_DEBUG true
 ENV LOG_CHANNEL stderr
