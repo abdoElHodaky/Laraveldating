@@ -26,3 +26,6 @@ Route::put('/profile/settings', 'EditUserProfileController@updateSettings')->nam
 Route::delete('/profile', 'EditUserProfileController@destroyProfile')->name('profile.destroy');
 Route::post('/profile/like/{id}', 'ReactionController@like')->name('like');
 Route::post('/profile/dislike/{id}', 'ReactionController@dislike')->name('dislike');
+
+Route::post('/friendShip/{id}', 'FriendShipController@sendFriendRequest')->name('sendrequest');
+Route::post('/friendShip/{id}', 'FriendShipController@confirmOrDeny')->name('confirmOrdeny');
