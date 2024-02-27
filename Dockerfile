@@ -30,5 +30,5 @@ RUN composer install
 #RUN php artisan migrate:install
 #RUN php artisan migrate --force
 #RUN php artisan db:seed --force
-
+TUN php artisan storage:link
 EXPOSE 80 81
