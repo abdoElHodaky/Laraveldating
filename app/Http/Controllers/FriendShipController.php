@@ -24,9 +24,10 @@ class FriendShipController extends Controller
            "with"=>$friend->id                     
         ]);
     }
-    public function confirmOrDeny(int $senderId,int $confirm){
+    public function confirmOrDeny(int $senderId){
         $sender=User::find($senderId);
-        $this->friendService($sender, confirm)
+        $confirm=int($request->only("confirm"));
+        $this->friendService($sender, $confirm)
         return response()->json([
           "confirmed" => auth()->user->isFriendWith($sender)                     
         ]);
