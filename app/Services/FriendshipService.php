@@ -7,7 +7,7 @@ use App\User;
 class FriendShipService
 {
   User $user;
-  public  __construct(User $user){
+  public function __construct(User $user){
     $this->user=$user;
   }
  /* public function friend(User $friend){
