@@ -32,6 +32,9 @@ class FriendShipController extends Controller
           "confirmed" => auth()->user->isFriendWith($sender)                     
         ]);
     }
+    public function friends(){
+        response()->json(compact(auth()->user->getFriends()));
+    }
     
     
 }
