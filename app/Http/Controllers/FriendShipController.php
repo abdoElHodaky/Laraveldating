@@ -10,12 +10,27 @@ class FriendShipController extends Controller
 {
     private FriendShipService $friendService;
 
-    public function __construct(FriendShipService $friendService)
+    public function __construct()
     {
         $this->middleware('auth');
-        $this->friendService = $reactionService;
+        $this->friendService = new FriendShipService(auth()->user);
     }
-
+    public function sendFriendRequest(int $id){
+       // $user=auth()->user;
+        $friend = User::find($id);
+        $this->friendService->friendRequest($friend);
+        return response()->json([
+          "friend requested" => $friend->hasFriendRequestFrom(auth()->user),
+           "with"=>$friend->id                     
+        ]);
+    }
+    public function confirmOrDeny(int $senderId,int $confirm){
+        $sender=User::find($senderId);
+        $this->friendService($sender, confirm)
+        return response()->json([
+          "confirmed" => auth()->user->isFriendWith($sender)                     
+        ]);
+    }
     
     
 }
