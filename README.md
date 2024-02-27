@@ -3,6 +3,8 @@
 ![gif image showing usage](/datingApp.gif)
 
 ##### Change database and other settings in .env.example and rename it to .env (REMEMBER THAT IT IS A HIDDEN FILE)
+
+![View](https://laraveldating.onrender.com)
 ##### Please run following commands:
 ###### composer install
 ###### composer dump-autoload
